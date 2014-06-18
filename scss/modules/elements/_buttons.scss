@@ -1,3 +1,57 @@
+.button-shadow {
+	background-color: rgb(0, 188, 180); //Variables
+	border: 0;
+	border-bottom: 0.4em rgb(0, 163, 156) solid; //Variables
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 0.25em;
+	max-width: 280px;
+	padding: 1em 3em;
+	width: 15%;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-appearance: none;
+	display: table;
+}
+
+.button-shadow.delete {
+	background-color: rgb(255, 91, 53); //Variables
+	border-bottom: 0.4em rgb(212, 69, 29) solid; //Variables
+}
+
+.button-shadow:active {
+	margin-top: 0.3em;
+	border-bottom-width: 0.2em;
+}
+
+.button {
+	background: rgb(249, 206, 47);
+	padding: 1em 2em;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	display: table;
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	-ms-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s; //Mixin instead (wasn't working)
+}
+
+.button.delete {
+	background: rgb(255, 91, 53);
+}
+
+.button.delete:hover {
+	background: darken(rgb(255, 91, 53), 10%);
+}
+
+.button:hover {
+	background: darken(rgb(249, 206, 47), 10%); //Variables
+}
+
+
 // .btn-group{
 // 	margin-bottom:1em;
 // }
