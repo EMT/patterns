@@ -1,24 +1,41 @@
+body {
+  background: #eef1f3;
+  font-family: Helvetica; }
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto; }
+
 .color-block {
-  width: 22%;
+  width: 30%;
   display: inline-block;
-  margin: 0 20px;
+  float: left;
+  margin: 10px 1.6%;
   text-align: center;
   border-radius: 3px;
-  overflow: hidden; }
+  overflow: hidden;
+  color: #2c3643; }
 
-body {
-  background: lightgrey;
-  font-family: Helvetica; }
+.color-wrapper {
+  width: 100%;
+  margin: 10px -10px 10px -10px; }
+
+.color-wrapper:after {
+  content: '';
+  display: block;
+  clear: both; }
 
 .color-code {
   background: white;
-  padding: 15px;
-  font-weight: bold; }
+  padding: 12px; }
 
 .variable-name {
-  background: grey;
-  padding: 15px; }
+  background: #fcfcfc;
+  padding: 7px; }
 
-.wrapper {
-  width: 65%;
-  margin: 0 auto; }
+.color-block.red .color-code {
+  background: #de3835; }
+
+.color-block.grey .color-code {
+  background: #2c3643;
+  color: white; }
