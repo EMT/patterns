@@ -1,31 +1,55 @@
-.color-block {
-	width: 22%;
-	display: inline-block;
-	margin: 0 20px;
-	text-align: center;
-	border-radius: 3px;
-	overflow: hidden;
-
-}
+// Generic Template Layout
 
 body {
-	background: lightgrey;
+	background: rgb(238, 241, 243);
 	font-family: Helvetica;
 }
 
+.wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
+// Sizing is good, currently using a basic grid system
+// until we can decide on a layout to use across the pattern library
+
+.color-block {
+	width: 30%;
+	display: inline-block;
+	float: left;
+	margin: 10px 1.6%;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+	color: rgb(44, 54, 67);
+}
+
+.color-wrapper {
+	width: 100%;
+	margin: 10px -10px 10px -10px;
+}
+
+.color-wrapper:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
 .color-code {
-	background: white;
-	padding: 15px;
-	font-weight: bold;
+	background: rgb(255,255,255);
+	padding: 12px;
 }
 
 .variable-name {
-	background: grey;
-	padding: 15px;
-
+	background: rgb(252,252,252);
+	padding: 7px;
 }
 
-.wrapper {
-	width: 65%;
-	margin: 0 auto;
+.color-block.red .color-code {
+	background: rgb(222,56,53);
+}
+
+.color-block.grey .color-code {
+	background: rgb(44, 54, 67);
+	color: rgb(255,255,255);
 }
