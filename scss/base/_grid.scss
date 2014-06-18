@@ -1,0 +1,21 @@
+[class^="grid-col-"] {
+	float: left;
+	min-height: 1px;
+	margin: 0 $gutter-width/2 $gutter-width/2 $gutter-width/2;
+}
+
+[class^="grid-row-"] {
+	margin-bottom: $gutter-width;
+}
+
+@for $i from 1 through $column-count {
+
+	.grid-col-#{$i} {
+		width: $column-width*$i + $gutter-width*($i - 1);
+	}
+
+	.grid-row-#{$i} {
+		height: $column-width*$i + $gutter-width*($i - 1);
+	}
+
+}

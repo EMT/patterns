@@ -1,13 +1,15 @@
 //color palette. Please use rgb format
 
 
+//Grid
+$column-count: 6;
+$gutter-width: 4%;
+$column-width: (100% / $column-count) - $gutter-width;
+
+
 //font families
 
 $font-family:"proxima-nova", sans-serif;
-
-
-//typeplate:
-
 
 // ===================================================
 // TYPEPLATE : Custom Sass Variables
@@ -90,6 +92,7 @@ $zeta: 18; // 18 = 18 × 1
 $type-scale-unit-value: rem;
 
 
+// End of Typeplate =============================
 
 
 //
