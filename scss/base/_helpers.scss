@@ -1,0 +1,32 @@
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.pull-right{
+	float:right;
+}
+
+
+
+//The lines below are perfect for stopping black bars appearing above youtube/vimeo embeds. 
+.intrinsic-ratio{
+	@include fixed-ratio-wrapper-generator();
+}
+
+.fill-parent{
+	margin-bottom: 80px;
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

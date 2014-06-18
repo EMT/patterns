@@ -1,0 +1,56 @@
+// main{
+
+// 	$background:$grey;
+
+// 	background:$background;
+// 	padding-bottom:40px;
+// }
+
+// .inner-wrapper{
+
+// 	$padding:0 40px;
+// 	$max-width:1140px;
+
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	padding:$padding;
+// 	max-width:$max-width;
+// }
+// .inner-wrapper--narrow{
+// 	@extend .inner-wrapper;
+// 	max-width:700px;
+// }
+
+// .inner-wrapper--padded-vert{
+// 	$vert-padding:80px;
+
+// 	padding-top:$vert-padding;
+// 	padding-bottom:$vert-padding;
+// }
+
+// .sidebar.sidebar--minimal {
+// 	background:none;
+// 	color:$dark-grey;
+// 	width: 35%;
+// 	padding-top:60px;
+// 	@include border-box;
+// }
+
+// .inner-wrapper--padded-bottom{
+// 	padding-bottom:80px;
+// }
+
+// .inner-wrapper.inner-wrapper--padded-bottom:after {
+// 	content: '';
+// 	clear: both;
+// 	display: table;
+// }
+
+// .local-schools-manifesto, .other-schools-manifesto  {
+// 	border-bottom: solid 2px $blue2;
+// 	padding: 1em 1em 1em 0;
+// }
+
+// .local-schools-manifesto h3 { 
+// 	color: $lighter-grey;
+// }
