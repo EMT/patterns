@@ -64,13 +64,31 @@ table {
 .pull-right {
   float: right; }
 
+.intrinsic-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 80px; }
+
+.fill-parent {
+  margin-bottom: 80px;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.form-group {
+  margin-bottom: 20px; }
+
 body {
   background: #eef1f3;
   font-family: Helvetica; }
 
 .wrapper {
-  width: 50%;
-  margin: 0 auto; }
+  width: 80%;
+  margin: 1% auto; }
 
 .color-block {
   width: 30%;
