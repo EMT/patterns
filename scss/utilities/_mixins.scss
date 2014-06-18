@@ -30,3 +30,10 @@
 	}
 
 }
+
+@mixin fixed-ratio-wrapper-generator($x: 16,$y: 9){
+	position: relative;
+	padding-bottom: ($y / $x) * 100%;
+	height: 0;
+	margin-bottom: 80px;
+}

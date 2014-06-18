@@ -1,11 +1,7 @@
 @import 'utilities/all';
-
-@import 'reset';
-@import 'helpers';
-@import 'common';
-@import 'typography';
-
+@import 'base/all';
 @import 'vendor/all';
+@import 'page-specific/all';
 
 //Temp files go here:
 @import "temp/color-patterns";

@@ -1,0 +1,84 @@
+// .btn-group{
+// 	margin-bottom:1em;
+// }
+
+// .btn-group--centered{
+// 	text-align:center;
+// }
+
+// .btn-group--split{
+// 	*:first-child{
+
+// 	}
+
+// 	*:last-child{
+// 		float:right;
+// 	}
+// }
+
+// .btn{
+
+// 	$padding: 1.25em 1.8em;
+// 	$color:white;
+// 	$background-color:$blue2;
+// 	$font: #{1em}/#{1.5em} $font-family;
+// 	$transitioned-properties: (
+// 		background:darken($blue2, 10%),
+// 	);
+
+// 	//Fieldwork Default Styles
+// 	padding:$padding;
+// 	display:inline-block;
+// 	border:none;
+// 	width:auto;
+// 	outline:none;
+// 	cursor:pointer;
+// 	margin:0 0 1.25em 0;
+// 	font:$font;
+// 	color:$color;
+// 	background-color:$background-color;
+// 	@include transition((":hover"), $transition-times, $transitioned-properties);
+
+// 	text-align:center;
+// 	@include border-box;
+// 	min-width:200px;
+
+// 	&:hover{
+// 		text-decoration: none;
+// 	}
+// }
+
+// // .btn--fixed-width{
+// // 	@extend .btn;
+// // 	@include border-box;
+// // 	text-align:center;
+// // 	width:200px;
+// // }
+
+// .btn--auto-width{
+// 	width:auto;
+// }
+
+// .btn--full-width{
+// 	width:100%;
+// }
+
+// .btn--pull-right{
+// 	float:right;
+// }
+
+// .btn--neutral{
+// 	background-color:darken(#CCC, 10%);
+// 	$transitioned-properties: (
+// 		background:darken(#CCC, 20%),
+// 	);
+// 	@include transition((":hover"), $transition-times, $transitioned-properties);
+// }
+
+// .btn--small {
+// 	font-size: 0.85em;
+// }
+
+// .btn--large {
+// 	font-size: 1.25em;
+// }
