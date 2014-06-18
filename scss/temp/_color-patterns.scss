@@ -1,0 +1,31 @@
+.color-block {
+	width: 22%;
+	display: inline-block;
+	margin: 0 20px;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+
+}
+
+body {
+	background: lightgrey;
+	font-family: Helvetica;
+}
+
+.color-code {
+	background: white;
+	padding: 15px;
+	font-weight: bold;
+}
+
+.variable-name {
+	background: grey;
+	padding: 15px;
+
+}
+
+.wrapper {
+	width: 65%;
+	margin: 0 auto;
+}
