@@ -37,6 +37,8 @@
 	-ms-transition: background 0.3s;
 	-o-transition: background 0.3s;
 	transition: background 0.3s; //Mixin instead (wasn't working)
+	border: none;
+	cursor: pointer;
 }
 
 .button.delete {
