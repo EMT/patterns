@@ -17,18 +17,26 @@ nav.aside {
 	position: fixed;
 	height: 100%;
 	background: rgb(51, 51, 51);
-	box-sizing: border-box;
-	padding: 2%;
 }
 
 nav.aside a {
 	color: rgb(255,255,255);
 	text-decoration: none;
 	font-size: 1em;
+	display: block;
+	padding: 1em;
 }
 
-nav.aside li {
-	margin: 1em 0;
+nav.aside ul {
+	margin-top: 2em;
+}
+
+nav.aside li.current {
+	background: rgb(255,255,255);
+}
+
+nav.aside li.current a {
+	color: rgb(51,51,51);
 }
 
 // main{
