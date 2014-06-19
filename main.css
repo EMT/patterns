@@ -180,12 +180,6 @@ LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/li
 LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
 */
 @font-face {
-  font-family: 'Neuzeit';
-  src: url("../fonts/neuzeit-book.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/neuzeit-book.eot?#iefix") format("embedded-opentype"), url("../fonts/neuzeit-book.woff") format("woff"), url("../fonts/neuzeit-book.ttf") format("truetype"), url("../fonts/neuzeit-book.svg#svgFontName") format("svg");
-  /* Legacy iOS */ }
-@font-face {
   font-family: "Ampersand";
   src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
   unicode-range: U+0026; }
