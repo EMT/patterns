@@ -19,6 +19,10 @@ LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
        url('../fonts/neuzeit-book.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+
+// Font-size reset to 100%
+$font-size: 100; 
+
 // END OF NONE-SASS STUFF.
 
 
@@ -559,6 +563,13 @@ small {
 	font-size: $small-print-size;
 }
 
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
 
 // $Styles $Headings
 // -------------------------------------//
