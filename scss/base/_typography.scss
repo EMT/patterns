@@ -20,8 +20,6 @@ LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
 }
 
 
-// Font-size reset to 100%
-$font-size: 100; 
 
 // END OF NONE-SASS STUFF.
 
@@ -858,3 +856,8 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
+
+.style-title {
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+}

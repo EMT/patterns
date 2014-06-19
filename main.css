@@ -129,7 +129,7 @@ table {
 
 .grid {
   background: white;
-  margin: -2%; }
+  margin: 0 -2%; }
   .grid [class^="grid-col-"] {
     height: 100px;
     background: black; }
@@ -235,57 +235,57 @@ h1, h2, h3, h4, h5, h6 {
 
 .tera {
   font-size: 117px;
-  font-size: 6.5rem;
-  margin-bottom: 4.56923px;
-  margin-bottom: 0.25385rem; }
+  font-size: 7.3125rem;
+  margin-bottom: 3.61026px;
+  margin-bottom: 0.22564rem; }
 
 .giga {
   font-size: 90px;
-  font-size: 5rem;
-  margin-bottom: 5.94px;
-  margin-bottom: 0.33rem; }
+  font-size: 5.625rem;
+  margin-bottom: 4.69333px;
+  margin-bottom: 0.29333rem; }
 
 .mega {
   font-size: 72px;
-  font-size: 4rem;
-  margin-bottom: 7.425px;
-  margin-bottom: 0.4125rem; }
+  font-size: 4.5rem;
+  margin-bottom: 5.86667px;
+  margin-bottom: 0.36667rem; }
 
 .alpha, h1 {
   font-size: 60px;
-  font-size: 3.33333rem;
-  margin-bottom: 8.91px;
-  margin-bottom: 0.495rem; }
+  font-size: 3.75rem;
+  margin-bottom: 7.04px;
+  margin-bottom: 0.44rem; }
 
 .beta, h2 {
   font-size: 48px;
-  font-size: 2.66667rem;
-  margin-bottom: 11.1375px;
-  margin-bottom: 0.61875rem; }
+  font-size: 3rem;
+  margin-bottom: 8.8px;
+  margin-bottom: 0.55rem; }
 
 .gamma, h3 {
   font-size: 36px;
-  font-size: 2rem;
-  margin-bottom: 14.85px;
-  margin-bottom: 0.825rem; }
+  font-size: 2.25rem;
+  margin-bottom: 11.73333px;
+  margin-bottom: 0.73333rem; }
 
 .delta, h4 {
   font-size: 24px;
-  font-size: 1.33333rem;
-  margin-bottom: 22.275px;
-  margin-bottom: 1.2375rem; }
+  font-size: 1.5rem;
+  margin-bottom: 17.6px;
+  margin-bottom: 1.1rem; }
 
 .epsilon, h5 {
   font-size: 21px;
-  font-size: 1.16667rem;
-  margin-bottom: 25.45714px;
-  margin-bottom: 1.41429rem; }
+  font-size: 1.3125rem;
+  margin-bottom: 20.11429px;
+  margin-bottom: 1.25714rem; }
 
 .zeta, h6 {
   font-size: 18px;
-  font-size: 1rem;
-  margin-bottom: 29.7px;
-  margin-bottom: 1.65rem; }
+  font-size: 1.125rem;
+  margin-bottom: 23.46667px;
+  margin-bottom: 1.46667rem; }
 
 p {
   margin: auto auto 1.5em; }
@@ -481,6 +481,10 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
+.style-title {
+  padding-bottom: 20px;
+  margin-bottom: 25px; }
+
 .form-group {
   margin-bottom: 20px; }
 

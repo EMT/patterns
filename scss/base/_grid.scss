@@ -24,7 +24,7 @@
 .grid{
 
 	background:white;
-	margin:0 -$gutter-width/2;
+	margin: 0 (-$gutter-width/2);
 
 	[class^="grid-col-"] {
 		height:100px;
