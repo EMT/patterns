@@ -8,3 +8,15 @@ url: "http://yourdomain.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+navigation:
+- text: Buttons
+  url: /buttons
+- text: Forms
+  url: /forms
+- text: Colors
+  url: /colors
+- text: List
+  url: /list
+- text: Tables
+  url: /tables
