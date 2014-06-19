@@ -568,6 +568,17 @@ label {
   background-color: #ff5b35;
   color: #b42200; }
 
+th, td {
+  padding: 1em; }
+
+th {
+  background: #333333;
+  color: white; }
+
+td {
+  border: solid 1px white;
+  background: gainsboro; }
+
 .color-block {
   width: 30%;
   display: inline-block;
