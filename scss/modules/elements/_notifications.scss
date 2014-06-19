@@ -1,0 +1,19 @@
+.msg {
+    margin: 0 0 2em;
+    padding: 1em;
+}
+
+.msg.note {
+    background-color: rgb(242, 242, 202);
+    color: darken(rgb(242, 242, 202),60%);
+}
+
+.msg.success {
+    background-color: rgb(5, 206, 123);
+    color: darken(rgb(5, 206, 123),25%);
+}
+
+.msg.warning {
+    background-color: rgb(255, 91, 53);
+    color: darken(rgb(255, 91, 53),25%);
+}
