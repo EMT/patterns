@@ -20,3 +20,5 @@ navigation:
   url: /list
 - text: Tables
   url: /tables
+- text: Grid
+  url: /grid
