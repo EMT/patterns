@@ -496,13 +496,16 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"], i
 label {
   color: #58595b;
   border: 0;
-  display: block;
+  display: inline-block;
   font-size: 1em;
   font-weight: bold;
   line-height: 1.4em;
   margin-bottom: 0.25em;
   position: relative;
   text-transform: none; }
+
+textarea {
+  min-height: 200px; }
 
 .button-shadow {
   background-color: #00bcb4;
