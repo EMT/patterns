@@ -10,6 +10,8 @@ markdown: kramdown
 permalink: pretty
 
 navigation:
+- text: Typography
+  url: /typography
 - text: Buttons
   url: /buttons
 - text: Forms
@@ -22,3 +24,5 @@ navigation:
   url: /tables
 - text: Notifications
   url: /notifications
+- text: Grid
+  url: /grid
