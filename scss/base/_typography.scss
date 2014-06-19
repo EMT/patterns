@@ -624,14 +624,16 @@ h6 {
 p {
 	margin: auto auto $indent-val;
 
-	// Conditonal Check For Paragraph Styling
-	@if $paragraph-vertical-whitespace == false {
-		& + p {
-			//siblings indentation
-			text-indent: $indent-val;
-			margin-top: -$indent-val;
-		}
-	}
+
+	// Causing issues with forms - Temp disabled
+	// // Conditonal Check For Paragraph Styling
+	// @if $paragraph-vertical-whitespace == false {
+	// 	& + p {
+	// 		//siblings indentation
+	// 		text-indent: $indent-val;
+	// 		margin-top: -$indent-val;
+	// 	}
+	// }
 }
 
 
