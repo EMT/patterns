@@ -18,7 +18,7 @@ navigation:
   url: /forms
 - text: Colors
   url: /colors
-- text: List
+- text: Lists
   url: /list
 - text: Tables
   url: /tables
