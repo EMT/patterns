@@ -186,24 +186,10 @@ body {
 pre code {
   word-wrap: normal; }
 
-/**
- * Dropcap Sass @include
- * Use the following Sass @include with any selector you feel necessary.
- *
-	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
- *
- * Extend this object into your custom stylesheet. Let the variables do the work.
- *
- */
 html {
   font: normal 100%/1.65 serif; }
 
 body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
   color: #444444; }
 
 small {
@@ -277,25 +263,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: auto auto 1.5em; }
 
-abbr,
-acronym,
-blockquote,
-code,
-dir,
-kbd,
-listing,
-plaintext,
-q,
-samp,
-tt,
-var,
-xmp {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -o-hyphens: none;
-  hyphens: none; }
-
 pre code {
   white-space: -moz-pre-wrap;
   white-space: pre-wrap; }
@@ -330,21 +297,6 @@ h4,
 h5,
 h6 {
   color: #f6303e; }
-
-p + .drop-cap {
-  text-indent: 0;
-  margin-top: 0; }
-
-.drop-cap:first-letter {
-  float: left;
-  margin: inherit;
-  padding: inherit;
-  font-size: 4em;
-  font-family: inherit;
-  line-height: 1;
-  text-indent: 0;
-  background: transparent;
-  color: inherit; }
 
 /**
  * Lining Definition Style Markup
@@ -471,6 +423,56 @@ p + .drop-cap {
 .style-title {
   padding-bottom: 20px;
   margin-bottom: 25px; }
+
+body {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto; }
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none; }
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+p + .drop-cap {
+  text-indent: 0;
+  margin-top: 0; }
+
+.drop-cap:first-letter {
+  float: left;
+  margin: inherit;
+  padding: inherit;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit; }
 
 .form-group {
   margin-bottom: 20px; }

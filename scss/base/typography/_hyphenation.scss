@@ -1,0 +1,20 @@
+body {
+	@include vendorize(hyphens, auto);
+}
+
+// http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+	@include vendorize(hyphens, none);
+}

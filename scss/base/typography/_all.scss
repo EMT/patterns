@@ -109,18 +109,7 @@ $small-caps-color: gray !default;
 $small-caps-weight: 600 !default;
 
 
-// $Variable $DropCap
-// -------------------------------------//
 
-$dropcap-float-position: left !default;
-$dropcap-font-size: 4em !default;
-$dropcap-font-family: inherit !default;
-$dropcap-txt-indent: 0 !default;
-$dropcap-margin: inherit !default;
-$dropcap-padding: inherit !default;
-$dropcap-color: inherit !default;
-$dropcap-line-height: 1 !default;
-$dropcap-bg: transparent !default;
 
 
 // .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
@@ -232,18 +221,7 @@ $dropcap-bg: transparent !default;
 }
 
 
-// $Mixin $Hypens
-// -------------------------------------//
-//http://trentwalton.com/2011/09/07/css-hyphenation
 
-@mixin css-hyphens($val) {
-	// Accepted values: [ none | manual | auto ]
-	-webkit-hyphens: $val; // Safari 5.1 thru 6, iOS 4.2 thru 6
-	-moz-hyphens: $val; // Firefox 16 thru 20
-	-ms-hyphens: $val; // IE10
-	-o-hyphens: $val; // PRESTO...haha LOL
-	hyphens: $val; // W3C standard
-}
 
 
 // $Mixin $Smallcaps
@@ -363,39 +341,6 @@ $dropcap-bg: transparent !default;
 	word-wrap: auto;
 }
 
-
-// $Mixin $Dropcaps
-// -------------------------------------//
-/**
- * Dropcap Sass @include
- * Use the following Sass @include with any selector you feel necessary.
- *
-	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
- *
- * Extend this object into your custom stylesheet. Let the variables do the work.
- *
- */
-
-// Use @include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
-// to pass the following arguments below. Feel free to pass in custom
-// values for the variables we've provided.
-//
-// Make sure you add the class “drop-cap” to your markup in order to operate.
-@mixin dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg) {
-	&:first-letter {
-		float: $dropcap-float-position;
-		margin: $dropcap-margin;
-		padding: $dropcap-padding;
-		font-size: $dropcap-font-size;
-		font-family: $dropcap-font-family;
-		line-height: $dropcap-line-height;
-		text-indent: $dropcap-txt-indent;
-		background: $dropcap-bg;
-		color: $dropcap-color;
-	}
-}
-
-
 // $Mixin $Codeblocks
 // -------------------------------------//
 
@@ -489,9 +434,6 @@ html {
 }
 
 body {
-	// Ala Trent Walton
-	@include css-hyphens(auto);
-
 	// normal: Indicates that lines may only break at normal word break points.
 	// break-word : Indicates that normally unbreakable words may be broken at ...
 	// arbitrary points if there are no otherwise acceptable break points in the line.
@@ -601,25 +543,7 @@ p {
 }
 
 
-// $Styles $Hyphenation
-// -------------------------------------//
-// http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
 
-abbr,
-acronym,
-blockquote,
-code,
-dir,
-kbd,
-listing,
-plaintext,
-q,
-samp,
-tt,
-var,
-xmp {
-	@include css-hyphens(none);
-}
 
 
 // $Styles $Codeblocks
@@ -670,20 +594,6 @@ h6 {
 	color: $heading-color;
 }
 
-
-// $Styles $Dropcap
-// -------------------------------------//
-
-// Combats our sibling paragraphs syling and indentation
-// As not to ruin our beautiful drop caps.
-p + .drop-cap {
-	text-indent: 0;
-	margin-top: 0;
-}
-
-.drop-cap {
-	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
-}
 
 
 // $Styles $Definition-Lists
@@ -803,3 +713,6 @@ p + .drop-cap {
 	padding-bottom: 20px;
 	margin-bottom: 25px;
 }
+
+@import 'hyphenation';
+@import 'drop-caps';
