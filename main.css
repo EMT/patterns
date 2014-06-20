@@ -140,6 +140,7 @@ body {
 
 .inner {
   width: 80%;
+  max-width: 1240px;
   margin-left: 20%;
   box-sizing: border-box;
   padding: 2%; }
@@ -578,7 +579,7 @@ td {
   width: 30%;
   display: inline-block;
   float: left;
-  margin: 10px 1.6%;
+  margin: 15px 1.6%;
   text-align: center;
   border-radius: 3px;
   overflow: hidden;
@@ -586,7 +587,7 @@ td {
 
 .color-wrapper {
   width: 100%;
-  margin: 10px -10px 10px -10px; }
+  margin: 30px -10px; }
 
 .color-wrapper:after {
   content: '';
