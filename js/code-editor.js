@@ -1,5 +1,7 @@
-var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("js-code-pattern"), {
-    lineNumbers: false,
-    mode: "xml",
-    htmlMode: true,
- });
+$(".js-code-pattern").each(function(){
+	var myCodeMirror = CodeMirror.fromTextArea($(this)[0], {
+	    lineNumbers: false,
+	    mode: "xml",
+	    htmlMode: true,
+	 });
+});
