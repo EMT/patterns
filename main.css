@@ -226,17 +226,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: auto auto 1.5em; }
 
-pre code {
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap; }
-
-pre {
-  white-space: pre; }
-
-code {
-  white-space: pre;
-  font-family: monospace; }
-
 /**
  * Abbreviations Markup
  *
@@ -261,128 +250,17 @@ h5,
 h6 {
   color: #f6303e; }
 
-/**
- * Lining Definition Style Markup
- *
-	<dl class="lining">
-		<dt><b></b></dt>
-		<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-.lining dt,
-.lining dd {
-  display: inline;
-  margin: 0; }
-.lining dt + dt:before,
-.lining dd + dt:before {
-  content: "\A";
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap; }
+
+pre {
   white-space: pre; }
-.lining dd + dd:before {
-  content: ", "; }
-.lining dd:before {
-  content: ": ";
-  margin-left: -0.2rem; }
 
-/**
- * Dictionary Definition Style Markup
- *
-	<dl class="dictionary-style">
-		<dt><b></b></dt>
-			<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-.dictionary-style dt {
-  display: inline;
-  counter-reset: definitions; }
-  .dictionary-style dt + dt:before {
-    content: ", ";
-    margin-left: -0.2rem; }
-.dictionary-style dd {
-  display: block;
-  counter-increment: definitions; }
-  .dictionary-style dd:before {
-    content: counter(definitions,decimal) ". "; }
+code {
+  white-space: pre;
+  font-family: monospace; }
 
-/**
- * Blockquote Markup
- *
-		<figure>
-			<blockquote cite="">
-				<p></p>
-			</blockquote>
-			<figcaption>
-				<cite>
-					<small><a href=""></a></small>
-				</cite>
-			</figcaption>
-		</figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Pull Quotes Markup
- *
-	<aside class="pull-quote">
-		<blockquote>
-			<p></p>
-		</blockquote>
-	</aside>
- *
- * Extend this object into your custom stylesheet.
- *
- */
-.pull-quote {
-  position: relative;
-  padding: 1em; }
-  .pull-quote:before, .pull-quote:after {
-    height: 1em;
-    opacity: 0.5;
-    position: absolute;
-    font-size: 4em;
-    color: #dc976e; }
-  .pull-quote:before {
-    content: '“';
-    top: 0;
-    left: 0; }
-  .pull-quote:after {
-    content: '”';
-    bottom: 0;
-    right: 0; }
-
-/**
- * Figures Markup
- *
-	<figure>
-		<figcaption>
-			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
-		</figcaption>
-	</figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Footnote Markup : Replace 'X' with your unique number for each footnote
- *
-	<article>
-		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-		<footer>
-			<ol class="foot-notes">
-				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-			</ol>
-		</footer>
-	</article>
- *
- * Extend this object into your markup.
- *
- */
 body {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -433,6 +311,51 @@ p + .drop-cap {
   background: transparent;
   color: inherit; }
 
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.pull-quote {
+  position: relative;
+  padding: 1em; }
+  .pull-quote:before, .pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  .pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  .pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
 /* BASICS */
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */

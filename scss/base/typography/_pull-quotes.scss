@@ -1,0 +1,57 @@
+// $Variable $Pull-Quotes
+// -------------------------------------//
+
+$pull-quote-fontsize: 4em !default;
+$pull-quote-opacity: 0.5 !default;
+$pull-quote-color: #dc976e !default;
+
+
+// $Mixin $Pull-Quotes
+// -------------------------------------//
+
+@mixin pull-quotes($pull-quote-fontsize, $pull-quote-opacity, $pull-quote-color) {
+	position: relative;
+	padding: context-calc($pull-quote-fontsize, $pull-quote-fontsize, em);
+	&:before,
+	&:after {
+		height: context-calc($pull-quote-fontsize, $pull-quote-fontsize, em);
+		opacity: $pull-quote-opacity;
+		position: absolute;
+		font-size: $pull-quote-fontsize;
+		color: $pull-quote-color;
+	}
+	&:before {
+		content: '“';
+		top:  0;
+		left: 0;
+	}
+	&:after {
+		content: '”';
+		bottom: 0;
+		right: 0;
+	}
+}
+
+// $Styles $Pull-Quotes
+// -------------------------------------//
+// http://24ways.org/2005/swooshy-curly-quotes-without-images
+//
+// http://todomvc.com - Thanks sindresorhus!
+// https://github.com/typeplate/typeplate.github.io/issues/49
+
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+
+.pull-quote {
+	 @include pull-quotes($pull-quote-fontsize, $pull-quote-opacity, $pull-quote-color);
+}

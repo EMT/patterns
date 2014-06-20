@@ -1,0 +1,16 @@
+// $Styles $Codeblocks
+// -------------------------------------//
+
+pre code {
+	@extend %normal-wrap;
+	@include white-space(pre-wrap);
+}
+
+pre {
+	@include white-space(pre);
+}
+
+code {
+	@include white-space(pre);
+	font-family: monospace;
+}

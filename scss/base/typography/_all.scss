@@ -86,14 +86,6 @@ $zeta: 18 !default; // 18 = 18 × 1
 $type-scale-unit-value: rem !default;
 
 
-// $Variable $Pull-Quotes
-// -------------------------------------//
-
-$pull-quote-fontsize: 4em !default;
-$pull-quote-opacity: 0.5 !default;
-$pull-quote-color: #dc976e !default;
-
-
 // $Variable $Citation
 // -------------------------------------//
 
@@ -294,31 +286,6 @@ $small-caps-weight: 600 !default;
 }
 
 
-// $Mixin $Pull-Quotes
-// -------------------------------------//
-
-@mixin pull-quotes($pull-quote-fontsize, $pull-quote-opacity, $pull-quote-color) {
-	position: relative;
-	padding: context-calc($pull-quote-fontsize, $pull-quote-fontsize, em);
-	&:before,
-	&:after {
-		height: context-calc($pull-quote-fontsize, $pull-quote-fontsize, em);
-		opacity: $pull-quote-opacity;
-		position: absolute;
-		font-size: $pull-quote-fontsize;
-		color: $pull-quote-color;
-	}
-	&:before {
-		content: '“';
-		top:  0;
-		left: 0;
-	}
-	&:after {
-		content: '”';
-		bottom: 0;
-		right: 0;
-	}
-}
 
 
 // $Placeholder $Wordwrap
@@ -352,67 +319,6 @@ $small-caps-weight: 600 !default;
 		white-space: $wrap-space;
 	}
 }
-
-
-// $Mixin $Definition-Lists
-// -------------------------------------//
-// lining
-// http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
-//
-// dictionary-style
-// http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
-
-@mixin definition-list-style($style) {
-	// lining style
-	@if $style == lining {
-		dt,
-		dd {
-			display: inline;
-			margin: 0;
-		}
-		dt,
-		dd {
-			& + dt {
-				&:before {
-					content: "\A";
-					white-space: pre;
-				}
-			}
-		}
-		dd {
-			& + dd {
-				&:before {
-					content: ", ";
-				}
-			}
-			&:before {
-					content: ": ";
-					margin-left: -0.2rem; //removes extra space between the dt and the colon
-			}
-		}
-	}
-	// dictionary-style
-	@if $style == dictionary-style {
-		dt {
-			display: inline;
-			counter-reset: definitions;
-			& + dt {
-				&:before {
-					content: ", ";
-					margin-left: -0.2rem; // removes extra space between the dt and the comma
-				}
-			}
-		}
-		dd {
-			display: block;
-			counter-increment: definitions;
-			&:before {
-				content: counter(definitions, decimal) ". ";
-			}
-		}
-	}
-}
-
 
 
 // .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
@@ -545,25 +451,6 @@ p {
 
 
 
-
-// $Styles $Codeblocks
-// -------------------------------------//
-
-pre code {
-	@extend %normal-wrap;
-	@include white-space(pre-wrap);
-}
-
-pre {
-	@include white-space(pre);
-}
-
-code {
-	@include white-space(pre);
-	font-family: monospace;
-}
-
-
 // $Styles $Smallcaps
 // -------------------------------------//
 /**
@@ -595,120 +482,8 @@ h6 {
 }
 
 
-
-// $Styles $Definition-Lists
-// -------------------------------------//
-/**
- * Lining Definition Style Markup
- *
-	<dl class="lining">
-		<dt><b></b></dt>
-		<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-.lining {
-	@include definition-list-style(lining);
-}
-
-/**
- * Dictionary Definition Style Markup
- *
-	<dl class="dictionary-style">
-		<dt><b></b></dt>
-			<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-.dictionary-style {
-	@include definition-list-style(dictionary-style);
-}
-
-
-// $Styles $Blockquote-Markup
-// -------------------------------------//
-/**
- * Blockquote Markup
- *
-		<figure>
-			<blockquote cite="">
-				<p></p>
-			</blockquote>
-			<figcaption>
-				<cite>
-					<small><a href=""></a></small>
-				</cite>
-			</figcaption>
-		</figure>
- *
- * Extend this object into your markup.
- *
- */
-
-
-// $Styles $Pull-Quotes
-// -------------------------------------//
-// http://24ways.org/2005/swooshy-curly-quotes-without-images
-//
-// http://todomvc.com - Thanks sindresorhus!
-// https://github.com/typeplate/typeplate.github.io/issues/49
-
-/**
- * Pull Quotes Markup
- *
-	<aside class="pull-quote">
-		<blockquote>
-			<p></p>
-		</blockquote>
-	</aside>
- *
- * Extend this object into your custom stylesheet.
- *
- */
-
-.pull-quote {
-	 @include pull-quotes($pull-quote-fontsize, $pull-quote-opacity, $pull-quote-color);
-}
-
-
-// $Styles $Figures
-// -------------------------------------//
-/**
- * Figures Markup
- *
-	<figure>
-		<figcaption>
-			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
-		</figcaption>
-	</figure>
- *
- * Extend this object into your markup.
- *
- */
-
-
-// $Styles $Footnotes
-// -------------------------------------//
-/**
- * Footnote Markup : Replace 'X' with your unique number for each footnote
- *
-	<article>
-		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-		<footer>
-			<ol class="foot-notes">
-				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-			</ol>
-		</footer>
-	</article>
- *
- * Extend this object into your markup.
- *
- */
-
-
+@import 'code-blocks';
 @import 'hyphenation';
 @import 'drop-caps';
+@import 'pull-quotes';
+@import 'footnotes';
