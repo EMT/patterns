@@ -25,3 +25,4 @@ $(".js-code-pattern").each(function(){
     autoFormatSelection(myCodeMirror);
 
 });
+
