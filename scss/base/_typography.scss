@@ -57,16 +57,6 @@ $body-copy-color: #444 !default;
 $heading-color: #222 !default;
 
 
-// $Variable $Ampersand
-// -------------------------------------//
-
-$amp-fontface-name: Ampersand !default;
-$amp-fontface-source: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua') !default;
-$amp-fontface-fallback: local('Georgia') !default;
-
-// Allows for our ampersand element to have differing
-// font-family from the ampersand unicode font-family.
-$amp-font-family: Verdana, sans-serif !default;
 
 
 // $Variable $Icon-Font-Helper
