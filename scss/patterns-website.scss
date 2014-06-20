@@ -54,6 +54,20 @@ nav.aside li.current a {
 	margin-bottom: 0.2em;
 }
 
+.button-shadow {
+	margin-bottom: 20px;
+}
+
+.two-col {
+	width: 48%; 
+	float: left;
+}
+
+.two-col:first-of-type {
+	margin-right: 4%;
+}
+
+
 // Color blocks template layout
 
 .color-block {

@@ -831,6 +831,16 @@ nav.aside li.current a {
 .style-heading h1 {
   margin-bottom: 0.2em; }
 
+.button-shadow {
+  margin-bottom: 20px; }
+
+.two-col {
+  width: 48%;
+  float: left; }
+
+.two-col:first-of-type {
+  margin-right: 4%; }
+
 .color-block {
   width: 30%;
   display: inline-block;
