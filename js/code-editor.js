@@ -3,5 +3,6 @@ $(".js-code-pattern").each(function(){
 	    lineNumbers: false,
 	    mode: "xml",
 	    htmlMode: true,
+	    readOnly: true
 	 });
 });
