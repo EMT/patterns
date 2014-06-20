@@ -482,7 +482,7 @@ p + .drop-cap {
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
   height: auto;
-  padding: 1em 0.5em; }
+  padding: 0.5em; }
 
 .CodeMirror-scroll {
   /* Set scrolling behaviour here */
