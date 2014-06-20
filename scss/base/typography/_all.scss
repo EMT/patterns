@@ -9,19 +9,6 @@ LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
 */
 
 
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
-// $Variables
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-
-
-// $Variable $BaseType
-// -------------------------------------//
-//the serif boolean var can be redeclared from another stylesheet. However
-//the var must be placed after your @import "typeplate.scss";
-$serif-boolean: true !default;
-
 $measure: $font-base * $line-height;
 
 
@@ -38,16 +25,6 @@ $cite-font-size: inherit !default;
 
 $small-caps-color: gray !default;
 $small-caps-weight: 600 !default;
-
-
-
-
-
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
-//
-// $Fontfaces
-//
-// .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
 
 
 
@@ -238,11 +215,7 @@ $small-caps-weight: 600 !default;
 // -------------------------------------//
 
 html {
-	@if $custom-font-family {
-		font: $font-weight #{$font-size + "%"}/#{$line-height} $custom-font-family, $font-family;
-	} @else {
-		font: $font-weight #{$font-size + "%"}/#{$line-height} $font-family;
-	}
+	font: $font-weight #{$font-size + "%"}/#{$line-height} $font-family;
 }
 
 body {
@@ -288,12 +261,13 @@ strong {
 	text-rendering: optimizeLegibility; // voodoo to enable ligatures and kerning
 	line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
 	margin-top: 0;
+	color: $heading-color;
 }
 
 // Multi-dimensional array, where:
 // the first value is the name of the class
 // and the second value is the variable for the size
-$sizes: tera $tera, giga $giga, mega $mega, alpha $alpha, beta $beta, gamma $gamma, delta $delta, epsilon $epsilon, zeta $zeta;
+$sizes: tera $xx-large, giga $x-large, mega $large, alpha $medium, beta $small, gamma $x-small, delta $xx-small;
 
 // Sass loop to associate h1-h6 tags with their appropriate greek
 // heading based on a modular scale.
@@ -305,33 +279,23 @@ $sizes: tera $tera, giga $giga, mega $mega, alpha $alpha, beta $beta, gamma $gam
 }
 
 // associate h1-h6 tags with their appropriate greek heading
-h1 {
-	@extend .alpha;
+h1, .h1 {
+	@include type-scale($x-large, $font-base, '#{$type-scale-unit-value}', $measure);
 	@extend %hN;
 }
 
-h2 {
-	@extend .beta;
+h2, .h2 {
+	@include type-scale($large, $font-base, '#{$type-scale-unit-value}', $measure);
 	@extend %hN;
 }
 
-h3 {
-	@extend .gamma;
+h3, .h3 {
+	@include type-scale($medium, $font-base, '#{$type-scale-unit-value}', $measure);
 	@extend %hN;
 }
 
-h4 {
-	@extend .delta;
-	@extend %hN;
-}
-
-h5 {
-	@extend .epsilon;
-	@extend %hN;
-}
-
-h6 {
-	@extend .zeta;
+h4, .h4 {
+	@include type-scale($medium, $font-base, '#{$type-scale-unit-value}', $measure);
 	@extend %hN;
 }
 
@@ -355,37 +319,6 @@ p {
 }
 
 
-
-
-// $Styles $Smallcaps
-// -------------------------------------//
-/**
- * Abbreviations Markup
- *
-	<abbr title="hyper text markup language">HMTL</abbr>
- *
- * Extend this object into your markup.
- *
- */
-abbr {
-	@include smallcaps($small-caps-color, $small-caps-weight);
-	&[title]:hover {
-		cursor: help;
-	}
-}
-
-
-// $Styles $Headings-Color
-// -------------------------------------//
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: $heading-color;
-}
 
 
 @import 'code-blocks';
