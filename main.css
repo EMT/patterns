@@ -1,89 +1,609 @@
-/*
-Syntax error: Undefined variable: "$amp-fontface-name".
-        on line 137 of scss/base/_typography.scss
-        from line 5 of scss/base/_all.scss
-        from line 2 of scss/main.scss
+@charset "UTF-8";
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-Backtrace:
-scss/base/_typography.scss:137
-scss/base/_all.scss:5
-scss/main.scss:2
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/script/tree/string_interpolation.rb:83:in `_perform'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:366:in `visit_prop'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:470:in `block (2 levels) in visit_directive'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:470:in `map'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:470:in `block in visit_directive'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:469:in `visit_directive'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `map'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:88:in `block in with_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:88:in `with_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `map'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:88:in `block in with_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:88:in `with_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:151:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/tree/root_node.rb:20:in `render'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `each'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:393:in `on_file_changed'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:248:in `block in watch'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/listen-2.7.8/lib/listen/listener.rb:275:in `call'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/listen-2.7.8/lib/listen/listener.rb:275:in `_process_changes'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/listen-2.7.8/lib/listen/listener.rb:233:in `block in _wait_for_changes'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/listen-2.7.8/lib/listen/listener.rb:216:in `loop'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/listen-2.7.8/lib/listen/listener.rb:216:in `_wait_for_changes'
-/Users/edball/.rvm/gems/ruby-2.1.2/gems/listen-2.7.8/lib/listen/listener.rb:310:in `block in _start_wait_thread'
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+.pull-right {
+  float: right; }
+
+.intrinsic-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 80px; }
+
+.fill-parent {
+  margin-bottom: 80px;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.circular {
+  border-radius: 50%; }
+
+[class^="grid-col-"] {
+  float: left;
+  min-height: 1px;
+  margin: 0 2% 4% 2%; }
+
+[class^="grid-row-"] {
+  margin-bottom: 4%; }
+
+.grid-col-1 {
+  width: 12.66667%; }
+
+.grid-row-1 {
+  height: 12.66667%; }
+
+.grid-col-2 {
+  width: 29.33333%; }
+
+.grid-row-2 {
+  height: 29.33333%; }
+
+.grid-col-3 {
+  width: 46%; }
+
+.grid-row-3 {
+  height: 46%; }
+
+.grid-col-4 {
+  width: 62.66667%; }
+
+.grid-row-4 {
+  height: 62.66667%; }
+
+.grid-col-5 {
+  width: 79.33333%; }
+
+.grid-row-5 {
+  height: 79.33333%; }
+
+.grid-col-6 {
+  width: 96%; }
+
+.grid-row-6 {
+  height: 96%; }
+
+.grid {
+  background: white;
+  margin: 0 -2%; }
+  .grid [class^="grid-col-"] {
+    height: 100px;
+    background: black; }
+
+body {
+  background: #ebebe8;
+  font-family: 'Neuzeit'; }
+
+.inner {
+  width: 80%;
+  margin-left: 20%;
+  box-sizing: border-box;
+  padding: 2%; }
+
+.wrapper, body, html {
+  height: 100%; }
+
+nav.aside {
+  width: 20%;
+  max-width: 300px;
+  position: fixed;
+  height: 100%;
+  background: #333333; }
+
+nav.aside a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  padding: 1em; }
+
+nav.aside ul {
+  margin-top: 2em; }
+
+nav.aside li.current {
+  background: white; }
+
+nav.aside li.current a {
+  color: #333333; }
+
+/*!
+TYPEPLATE
+URL ........... http://typeplate.com
+VERSION ....... 1.1.4
+Github ........ https://github.com/typeplate/bower
+AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+LICENSE ....... Creative Commmons Attribution 3.0 (http://creativecommons.org/licenses/by/3.0)
+LICENSE URL ... https://github.com/typeplate/bower/blob/master/license.txt
 */
-body:before {
+body {
+  word-wrap: break-word; }
+
+pre code {
+  word-wrap: normal; }
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+html {
+  font: normal 100%/1.65 serif; }
+
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #444444; }
+
+small {
+  font-size: 65%; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0; }
+
+.tera {
+  font-size: 117px;
+  font-size: 7.3125rem;
+  margin-bottom: 3.61026px;
+  margin-bottom: 0.22564rem; }
+
+.giga {
+  font-size: 90px;
+  font-size: 5.625rem;
+  margin-bottom: 4.69333px;
+  margin-bottom: 0.29333rem; }
+
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  margin-bottom: 5.86667px;
+  margin-bottom: 0.36667rem; }
+
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+  margin-bottom: 7.04px;
+  margin-bottom: 0.44rem; }
+
+.beta, h2 {
+  font-size: 48px;
+  font-size: 3rem;
+  margin-bottom: 8.8px;
+  margin-bottom: 0.55rem; }
+
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 11.73333px;
+  margin-bottom: 0.73333rem; }
+
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 17.6px;
+  margin-bottom: 1.1rem; }
+
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  margin-bottom: 20.11429px;
+  margin-bottom: 1.25714rem; }
+
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 23.46667px;
+  margin-bottom: 1.46667rem; }
+
+p {
+  margin: auto auto 1.5em; }
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none; }
+
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap; }
+
+pre {
+  white-space: pre; }
+
+code {
   white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$amp-fontface-name\".\A         on line 137 of scss/base/_typography.scss\A         from line 5 of scss/base/_all.scss\A         from line 2 of scss/main.scss"; }
+  font-family: monospace; }
+
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray; }
+  abbr[title]:hover {
+    cursor: help; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f6303e; }
+
+p + .drop-cap {
+  text-indent: 0;
+  margin-top: 0; }
+
+.drop-cap:first-letter {
+  float: left;
+  margin: inherit;
+  padding: inherit;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit; }
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0; }
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre; }
+.lining dd + dd:before {
+  content: ", "; }
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem; }
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions; }
+  .dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions; }
+  .dictionary-style dd:before {
+    content: counter(definitions,decimal) ". "; }
+
+/**
+ * Blockquote Markup
+ *
+		<figure>
+			<blockquote cite="">
+				<p></p>
+			</blockquote>
+			<figcaption>
+				<cite>
+					<small><a href=""></a></small>
+				</cite>
+			</figcaption>
+		</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+.pull-quote {
+  position: relative;
+  padding: 1em; }
+  .pull-quote:before, .pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  .pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  .pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.style-title {
+  padding-bottom: 20px;
+  margin-bottom: 25px; }
+
+.form-group {
+  margin-bottom: 20px; }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="password"], textarea {
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  border: 1px solid gainsboro;
+  display: block;
+  font-size: 1em;
+  padding: 0.4em;
+  margin-bottom: 0.4em;
+  width: 100%;
+  vertical-align: middle; }
+
+label {
+  color: #58595b;
+  border: 0;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-bottom: 0.25em;
+  position: relative;
+  text-transform: none; }
+
+textarea {
+  min-height: 200px; }
+
+.button-shadow {
+  background-color: #00bcb4;
+  border: 0;
+  border-bottom: 0.4em #00a39c solid;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+  max-width: 280px;
+  padding: 1em 3em;
+  width: 15%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-appearance: none;
+  display: table; }
+
+.button-shadow.delete {
+  background-color: #ff5b35;
+  border-bottom: 0.4em #d4451d solid; }
+
+.button-shadow:active {
+  margin-top: 0.3em;
+  border-bottom-width: 0.2em; }
+
+.button {
+  background: #f9ce2f;
+  padding: 1em 2em;
+  color: white;
+  text-decoration: none;
+  display: table;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer; }
+
+.button.delete {
+  background: #ff5b35; }
+
+.button.delete:hover {
+  background: #ff3202; }
+
+.button:hover {
+  background: #eebd07; }
+
+.msg {
+  margin: 0 0 2em;
+  padding: 1em; }
+
+.msg.note {
+  background-color: #f2f2ca;
+  color: #6f6f1b; }
+
+.msg.success {
+  background-color: #05ce7b;
+  color: #025231; }
+
+.msg.warning {
+  background-color: #ff5b35;
+  color: #b42200; }
+
+th, td {
+  padding: 1em; }
+
+th {
+  background: #333333;
+  color: white; }
+
+td {
+  border: solid 1px white;
+  background: gainsboro; }
+
+.color-block {
+  width: 30%;
+  display: inline-block;
+  float: left;
+  margin: 10px 1.6%;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+  color: #2c3643; }
+
+.color-wrapper {
+  width: 100%;
+  margin: 10px -10px 10px -10px; }
+
+.color-wrapper:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.color-code {
+  background: white;
+  padding: 12px; }
+
+.variable-name {
+  background: #fcfcfc;
+  padding: 7px; }
+
+.color-block.red .color-code {
+  background: #de3835; }
+
+.color-block.grey .color-code {
+  background: #2c3643;
+  color: white; }

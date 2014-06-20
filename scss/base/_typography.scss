@@ -130,21 +130,6 @@ $dropcap-bg: transparent !default;
 // .x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x.x //
 
 
-// $Fontface $Unicode-Range-Ampersand
-// -------------------------------------//
-
-@font-face {
-	font-family: '#{$amp-fontface-name}';
-	src: $amp-fontface-source;
-	unicode-range: U+0026;
-}
-
-// Ampersand fallback font for unicode range
-@font-face {
-	font-family: '#{$amp-fontface-name}';
-	src: $amp-fontface-fallback;
-	unicode-range: U+270C;
-}
 
 
 // $Fontface $Icon-Font-Helper
@@ -288,24 +273,6 @@ $dropcap-bg: transparent !default;
 	font-size-adjust: $adjust-value;
 }
 
-
-// $Mixin $Ampersand
-// -------------------------------------//
-
-@mixin ampersand($amp-font-family...) {
-	font-family: $amp-font-family;
-}
-
-%ampersand-placeholder {
-	@include ampersand($amp-fontface-name, $amp-font-family);
-}
-
-// Call your ampersand on any element you wish from another stylesheet
-// using this Sass extend we've provided. For exmaple:
-//
-// <h6 class="ampersand">Dewey Cheat 'em & Howe</h6>
-//
-// .ampersand { @extend %ampersand-placeholder; }
 
 
 // $Mixin $Blockquote
