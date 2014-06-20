@@ -134,46 +134,6 @@ table {
     height: 100px;
     background: black; }
 
-body {
-  background: #ebebe8;
-  font-family: 'Neuzeit'; }
-
-.element {
-  margin-bottom: 5%; }
-
-.inner {
-  width: 80%;
-  max-width: 1240px;
-  margin-left: 20%;
-  box-sizing: border-box;
-  padding: 2%; }
-
-.wrapper, body, html {
-  height: 100%; }
-
-nav.aside {
-  width: 20%;
-  max-width: 300px;
-  position: fixed;
-  height: 100%;
-  background: #333333; }
-
-nav.aside a {
-  color: white;
-  text-decoration: none;
-  font-size: 1em;
-  display: block;
-  padding: 1em; }
-
-nav.aside ul {
-  margin-top: 2em; }
-
-nav.aside li.current {
-  background: white; }
-
-nav.aside li.current a {
-  color: #333333; }
-
 /*!
 TYPEPLATE
 URL ........... http://typeplate.com
@@ -903,6 +863,46 @@ th {
 td {
   border: solid 1px white;
   background: gainsboro; }
+
+body {
+  background: #ebebe8;
+  font-family: 'Neuzeit'; }
+
+.element {
+  margin-bottom: 5%; }
+
+.inner {
+  width: 80%;
+  max-width: 1240px;
+  margin-left: 20%;
+  box-sizing: border-box;
+  padding: 2%; }
+
+.wrapper, body, html {
+  height: 100%; }
+
+nav.aside {
+  width: 20%;
+  max-width: 300px;
+  position: fixed;
+  height: 100%;
+  background: #333333; }
+
+nav.aside a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  padding: 1em; }
+
+nav.aside ul {
+  margin-top: 2em; }
+
+nav.aside li.current {
+  background: white; }
+
+nav.aside li.current a {
+  color: #333333; }
 
 .color-block {
   width: 30%;

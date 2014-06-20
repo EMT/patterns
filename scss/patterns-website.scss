@@ -1,3 +1,53 @@
+body {
+	background: $grey--x-light;
+	font-family: 'Neuzeit';
+}
+.element {
+	margin-bottom: 5%;
+}
+
+.inner {
+	width: 80%;
+	max-width: 1240px; // This is a random size i picked, feel free to change it!
+	margin-left: 20%;
+	box-sizing: border-box;
+	padding: 2%;
+}
+
+.wrapper, body, html {
+	height: 100%;
+}
+
+nav.aside {
+	width: 20%;
+	max-width: 300px;
+	position: fixed;
+	height: 100%;
+	background: rgb(51, 51, 51);
+}
+
+nav.aside a {
+	color: rgb(255,255,255);
+	text-decoration: none;
+	font-size: 1em;
+	display: block;
+	padding: 1em;
+}
+
+nav.aside ul {
+	margin-top: 2em;
+}
+
+nav.aside li.current {
+	background: rgb(255,255,255);
+}
+
+nav.aside li.current a {
+	color: rgb(51,51,51);
+}
+
+
+
 // Generic Template Layout
 
 // Sizing is good, currently using a basic grid system
