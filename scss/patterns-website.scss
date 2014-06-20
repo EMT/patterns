@@ -46,12 +46,15 @@ nav.aside li.current a {
 	color: rgb(51,51,51);
 }
 
+.style-heading {
+	margin-bottom: 45px;
+}
 
+.style-heading h1 {
+	margin-bottom: 0.2em;
+}
 
-// Generic Template Layout
-
-// Sizing is good, currently using a basic grid system
-// until we can decide on a layout to use across the pattern library
+// Color blocks template layout
 
 .color-block {
 	width: 30%;

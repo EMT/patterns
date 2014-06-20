@@ -383,10 +383,6 @@ h6 {
  * Extend this object into your markup.
  *
  */
-.style-title {
-  padding-bottom: 20px;
-  margin-bottom: 25px; }
-
 body {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -905,6 +901,12 @@ nav.aside li.current {
 
 nav.aside li.current a {
   color: #333333; }
+
+.style-heading {
+  margin-bottom: 45px; }
+
+.style-heading h1 {
+  margin-bottom: 0.2em; }
 
 .color-block {
   width: 30%;
