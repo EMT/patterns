@@ -5,3 +5,53 @@ layout: default
 	<h1>Mixins</h1>
 	<p>List of mixins that we commonly use such as Vendorize and Border-box</p>
 </div>
+
+<div class="element">
+	<h4>Vendorize</h4>
+	<p>Ed can write this cause he made it but it just prefixes things.</p>
+<textarea data-mode="css" class="js-code-pattern">
+@mixin vendorize($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}</textarea>
+</div>
+
+<div class="element">
+	<h4>Border-box</h4>
+	<p>Again Ed can write this cause he made it but it just prefixes border-box for moz specifically</p>
+<textarea data-mode="css" class="js-code-pattern">
+@mixin border-box {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}</textarea>
+
+</div>
+
+<div class="element">
+	<h4>Transitions</h4>
+	<p>Again ed, are you starting to notice a pattern ? - prefixed transitions.</p>
+<textarea data-mode="css" class="js-code-pattern">
+@mixin transition($selectors, $times, $properties) {
+
+	$selector-string:null;
+
+	@each $selector in $selectors {
+		//implicit appending thanks to http://hugogiraudel.com/2013/07/15/understanding-sass-lists/
+		$selector-string: $selector-string, unquote('&#{$selector}');
+	}
+
+	@include vendorize("transition", all nth($times, (length($times)))*1s);
+
+	#{$selector-string}{
+		@include vendorize("transition-duration", nth($times, 1)*1s);
+		@each $property, $value in $properties {
+	        #{$property}: $value;
+		}
+	}
+
+}
+</textarea>
+</div>

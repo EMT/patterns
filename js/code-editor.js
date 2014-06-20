@@ -9,9 +9,10 @@ function getSelectedRange(editor) {
 }
 
 $(".js-code-pattern").each(function(){
+	var dataMode = $(this).data('mode');
 	var myCodeMirror = CodeMirror.fromTextArea($(this)[0], {
 	    lineNumbers: false,
-	    mode: "text/html",
+	    mode: dataMode,
 	    htmlMode: true,
 	    readOnly: true,
 	    indentWithTabs: true,
@@ -24,3 +25,4 @@ $(".js-code-pattern").each(function(){
     autoFormatSelection(myCodeMirror);
 
 });
+
