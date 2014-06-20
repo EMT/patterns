@@ -1,5 +1,22 @@
+//color naming convention: (based on those at http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/)
+// Start with the base color, then progress to dark or light, which allows you to then move to mid or extra (x) dark/light later on
+//x-dark
+//dark
+// mid-dark
+// base (default)
+// mid-light
+// light
+// x-light
+
+
 //color palette.
 $red: rgb(246,48,62);
+$white: rgb(255,255,255);
+
+
+$grey: rgb(102,102,102);
+$grey--light: rgb(219, 220, 217);
+$grey--x-light: rgb(235, 235, 232);
 
 
 //Grid
