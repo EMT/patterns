@@ -140,6 +140,7 @@ body {
 
 .inner {
   width: 80%;
+  max-width: 1240px;
   margin-left: 20%;
   box-sizing: border-box;
   padding: 2%; }
