@@ -138,6 +138,9 @@ body {
   background: #ebebe8;
   font-family: 'Neuzeit'; }
 
+.element {
+  margin-bottom: 5%; }
+
 .inner {
   width: 80%;
   max-width: 1240px;
@@ -554,7 +557,10 @@ textarea {
   margin: 0 0 2em;
   padding: 1em; }
 
-.msg.note {
+.msg a {
+  color: inherit; }
+
+.msg.warning {
   background-color: #f2f2ca;
   color: #6f6f1b; }
 
@@ -562,9 +568,13 @@ textarea {
   background-color: #05ce7b;
   color: #025231; }
 
-.msg.warning {
+.msg.error {
   background-color: #ff5b35;
   color: #b42200; }
+
+.msg.note {
+  background-color: #ace0db;
+  color: #0d7e79; }
 
 th, td {
   padding: 1em; }
