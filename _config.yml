@@ -26,3 +26,5 @@ navigation:
   url: /notifications
 - text: Grid
   url: /grid
+- text: Mixins
+  url: /mixins
