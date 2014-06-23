@@ -9,24 +9,25 @@ layout: default
 <div class="element">
 	<h4>Vendorize</h4>
 	<p>Ed can write this cause he made it but it just prefixes things.</p>
-<textarea data-mode="css" class="js-code-pattern">
+	{% highlight scss %}
 @mixin vendorize($name, $argument) {
 	-webkit-#{$name}: #{$argument};
 	-ms-#{$name}: #{$argument};
 	-moz-#{$name}: #{$argument};
 	-o-#{$name}: #{$argument};
 	#{$name}: #{$argument};
-}</textarea>
+}
+	{% endhighlight %}
 </div>
-
 <div class="element">
 	<h4>Border-box</h4>
 	<p>Again Ed, he can write this cause he made it but it just prefixes border-box for moz specifically</p>
-<textarea data-mode="css" class="js-code-pattern">
+	{% highlight scss %}
 @mixin border-box {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}</textarea>
+}
+	{% endhighlight %}
 
 </div>
 
