@@ -21,7 +21,7 @@ layout: default
 
 <div class="element">
 	<h4>Border-box</h4>
-	<p>Again Ed can write this cause he made it but it just prefixes border-box for moz specifically</p>
+	<p>Again Ed, he can write this cause he made it but it just prefixes border-box for moz specifically</p>
 <textarea data-mode="css" class="js-code-pattern">
 @mixin border-box {
 	-moz-box-sizing: border-box;
@@ -32,14 +32,13 @@ layout: default
 
 <div class="element">
 	<h4>Transitions</h4>
-	<p>Again ed, are you starting to notice a pattern ? - prefixed transitions.</p>
-<textarea data-mode="css" class="js-code-pattern">
+	<p>Again Ed, are you starting to notice a pattern ? - prefixed transitions.</p>
+	{% highlight scss %}
 @mixin transition($selectors, $times, $properties) {
 
 	$selector-string:null;
 
 	@each $selector in $selectors {
-		//implicit appending thanks to http://hugogiraudel.com/2013/07/15/understanding-sass-lists/
 		$selector-string: $selector-string, unquote('&#{$selector}');
 	}
 
@@ -53,5 +52,5 @@ layout: default
 	}
 
 }
-</textarea>
+	{% endhighlight %}
 </div>
