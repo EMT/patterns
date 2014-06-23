@@ -21,8 +21,6 @@ $(".js-code-pattern").each(function(){
         lineWrapping: true,
 	 });
 
-    CodeMirror.commands["selectAll"](myCodeMirror);
-    autoFormatSelection(myCodeMirror);
 
 });
 
