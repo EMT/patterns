@@ -1,21 +1,20 @@
 [class^="grid-col-"] {
 	float: left;
 	min-height: 1px;
-	margin: 0 $gutter-width/2 $gutter-width $gutter-width/2;
+	padding:0 $gutter-width/2 $gutter-width;
+
+	@include border-box;
 }
 
-[class^="grid-row-"] {
-	margin-bottom: $gutter-width;
-}
 
 @for $i from 1 through $column-count {
 
 	.grid-col-#{$i} {
-		width: $column-width*$i + $gutter-width*($i - 1);
+		width: $column-width*$i;
 	}
 
 	.grid-row-#{$i} {
-		height: $column-width*$i + $gutter-width*($i - 1);
+		height: $column-width*$i;
 	}
 
 }
@@ -23,11 +22,14 @@
 
 .grid{
 
-	background:white;
+	background:red;
 	margin: 0 (-$gutter-width/2);
+	overflow:hidden;
 
 	[class^="grid-col-"] {
-		height:100px;
-		background:black;
+		.col-content{
+			height:100px;
+			background:black;
+		}
 	}
 }

@@ -20,9 +20,9 @@ $grey--x-light: rgb(235, 235, 232);
 
 
 //Grid
-$column-count: 6;
-$gutter-width: 4%;
-$column-width: (100% / $column-count) - $gutter-width;
+$column-count: 20;
+$gutter-width: 20px;
+$column-width: (100% / $column-count); //- $gutter-width;
 
 
 //font families
