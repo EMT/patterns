@@ -110,3 +110,25 @@ nav.aside li.current a {
 	background: rgb(44, 54, 67);
 	color: rgb(255,255,255);
 }
+
+
+.markup > div {
+	display: none;
+}
+
+.markup .tabs li {
+	display: inline-block;
+	padding: 0.5em;
+	background: darken(rgb(255,255,255), 5%);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: pointer;
+}
+
+.markup .tabs li.active {
+	background: rgb(255,255,255);
+}
+
+.markup > div.active {
+	display: block;
+}

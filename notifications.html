@@ -24,11 +24,28 @@ layout: default
 			<p class="msg success">
 					Whatever you've done it worked! Gongrats.
 			</p>
-			{% highlight html %}
+			<div class="markup">
+			<ul class="tabs">
+				<li class="active">html</li>
+				<li>scss</li>
+			</ul>
+				<div class="html active">
+					{% highlight html %}
 <p class="msg success">
 	Whatever you've done, it worked! Gongrats.
 </p>
-			{% endhighlight %}
+					{% endhighlight %}
+				</div>
+				<div class="scss">
+					{% highlight scss %}
+.img {
+	display: block;
+	width: 100%;
+	color: lighten(rgb(55,55,55),10%);
+}
+					{% endhighlight %}
+				</div>
+			</div>
 		</div>
 		<div class="element">
 			<h4>Failure</h4>
