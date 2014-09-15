@@ -23,8 +23,9 @@
 .grid{
 
 	background:red;
-	margin: 0 (-$gutter-width/2);
+	margin: 20px (-$gutter-width/2);
 	overflow:hidden;
+	padding-top: 20px;
 
 	[class^="grid-col-"] {
 		.col-content{
@@ -32,4 +33,12 @@
 			background:black;
 		}
 	}
+}
+
+.col-r {
+	float: right;
+}
+
+.grid .tiny-cube .col-content{
+	// height: 350px;
 }
