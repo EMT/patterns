@@ -13,24 +13,16 @@ layout: default
 					Hey this is a note, nothing threatening, just wanted to inform you of something.
 			</p>
 			<div class="markup">
-				<ul class="tabs">
-					<li>Something</li>
-					<li>Something Else</li>
-				</ul>
-				<div>
 				{% highlight html %}
 <p class="msg note">
 	Hey this is a note, nothing threatening, just wanted to inform you of something.
 </p>
 				{% endhighlight %}
-				</div>
-				<div>
 				{% highlight html %}
 <p class="msg note">
 	This is the other note
 </p>
 				{% endhighlight %}
-				</div>
 
 			</div>
 		</div>
@@ -41,35 +33,23 @@ layout: default
 					Whatever you've done it worked! Gongrats.
 			</p>
 			<div class="markup">
-				<ul class="tabs">
-					<li>html</li>
-					<li>scss</li>
-					<li>css</li>
-				</ul>
-				<div class="html">
 					{% highlight html %}
 <p class="msg success">
-	Whatever you've done, it worked! Gongrats.
+    Whatever you've done, it worked! Gongrats.
 </p>
 					{% endhighlight %}
-				</div>
-				<div class="scss">
 					{% highlight scss %}
-.img {
-	display: block;
-	width: 100%;
-	color: lighten(rgb(55,55,55),10%);
+.msg.success {
+    background-color: rgb(5, 206, 123);
+    color: darken(rgb(5, 206, 123),25%);
 }
 					{% endhighlight %}
-				</div>
-				<div class="scss">
-					{% highlight scss %}
-.cake {
-	display: none;
-	destroy: all humans;
+					{% highlight css %}
+.msg.success {
+    background-color: rgb(5, 206, 123);
+    color: rgb(2, 82, 49);
 }
 					{% endhighlight %}
-				</div>
 			</div>
 		</div>
 		<div class="element">
