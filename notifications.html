@@ -11,12 +11,28 @@ layout: default
 			<p>Generic message, usually shown for everyone using the app in a key location such as the dashboard. Can be used as a message for maintenance, scheduled down time or general announcements.</p>
 			<p class="msg note">
 					Hey this is a note, nothing threatening, just wanted to inform you of something.
-			</p>	
-			{% highlight html %}
+			</p>
+			<div class="markup">
+				<ul class="tabs">
+					<li>Something</li>
+					<li>Something Else</li>
+				</ul>
+				<div>
+				{% highlight html %}
 <p class="msg note">
 	Hey this is a note, nothing threatening, just wanted to inform you of something.
 </p>
-			{% endhighlight %}
+				{% endhighlight %}
+				</div>
+				<div>
+				{% highlight html %}
+<p class="msg note">
+	This is the other note
+</p>
+				{% endhighlight %}
+				</div>
+
+			</div>
 		</div>
 		<div class="element">
 			<h4>Success</h4>
@@ -25,11 +41,12 @@ layout: default
 					Whatever you've done it worked! Gongrats.
 			</p>
 			<div class="markup">
-			<ul class="tabs">
-				<li class="active">html</li>
-				<li>scss</li>
-			</ul>
-				<div class="html active">
+				<ul class="tabs">
+					<li>html</li>
+					<li>scss</li>
+					<li>css</li>
+				</ul>
+				<div class="html">
 					{% highlight html %}
 <p class="msg success">
 	Whatever you've done, it worked! Gongrats.
@@ -42,6 +59,14 @@ layout: default
 	display: block;
 	width: 100%;
 	color: lighten(rgb(55,55,55),10%);
+}
+					{% endhighlight %}
+				</div>
+				<div class="scss">
+					{% highlight scss %}
+.cake {
+	display: none;
+	destroy: all humans;
 }
 					{% endhighlight %}
 				</div>
